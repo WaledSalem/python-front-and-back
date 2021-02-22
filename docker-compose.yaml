@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  frontend:
+    container_name: frontend
+    build: ./frontend
+    image: python-frontend:latest
+    ports:
+    - target: 5000
+      published: 5000
+    environment:
+      YOUR_NAME: "Waled Salem"     
+  backend:
+    container_name: backend
+    build: ./backend
+    image: python-backend:latest
+    ports:
+    - target: 5001
+      published: 5001
